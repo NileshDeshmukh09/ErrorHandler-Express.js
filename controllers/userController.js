@@ -5,7 +5,8 @@ export const newUser = ( req, res , next ) => {
     const userExist = true;
 
     if ( userExist ) {
-        return next(new ErrorHandler("user Already Exist", 400))
+        // return next(new ErrorHandler("user Already Exist", 400))
+        return next(new ErrorHandler())
     }
 
     res
